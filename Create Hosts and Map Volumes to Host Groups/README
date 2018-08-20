@@ -1,0 +1,10 @@
+This is an example for an Active Cluster configuration with two Arrays
+There are two scripts. One for the initial hosts and host groups configuration. Another for additional volume creation and mapping to the host groups
+
+definition_UK.py contains the definition for your clusters. Name, IP and token. Customize this for your setup
+Cluster_UK.py contains the host group, the hosts and the WWN for each one. It also include the volume sizes to be created.
+If you have more volumes to create after the initial setup, simply add the sizes needed
+
+create_host.py add the hosts to each array and create a Host Group with those hosts in each of the arrays
+
+create_volume_and_map_hostg.py will create the volumes specified, will rename them with the hostgroup name and the last 4 IDs of the volume and will map them to hosts in each array
